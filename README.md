@@ -1,95 +1,46 @@
-# 9Spokes Coding Challenge
+# Getting Started with Create React App
 
-## Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This repo contains the instructions and the data you need to complete the _9Spokes coding challenge_.  This challenge is not intended to be complex, but it is an opportunity for you to showcase your understanding and applying of good development practices.
+## Available Scripts
 
-You are encouraged to treat this as a real-life project.  This typically means:
+In the project directory, you can run:
 
-- Use version control effectively
-- Include some basic documentation
-- Include some unit tests
-- Use a naming convention
+### `yarn start`
 
-You are free to use any programming language you'd like.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## The Challenge
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-You are tasked with developing an application that performs the following tasks in sequence:
+### `yarn test`
 
-- Read and parse an external data file `data.json` (located in this repo)
-- Using this data, calculate and print the values of 5 common accounting metrics:
-  1. Revenue
-  2. Expenses
-  3. Gross Profit Margin
-  4. Net Profit Margin
-  5. Working Capital Ratio
-- Commit your changes, and upload all your work to a feature branch of your choice.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Instructions
+### `yarn build`
 
-- Begin by _forking_ the current repository to your own `github.com` account
-- Clone the repo locally
-- Write your code, commit often
-- Once you are satisfied with the output, push your changes to your `github.com` account
-- Share the link
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Calculations
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Use the formulas below to calculate your values:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Revenue
+### `yarn eject`
 
-This should be calculated by adding up all the values under `total_value` where the `account_category` field is set to `revenue`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Expenses
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-This should be calculated by adding up all the values under `total_value` where the `account_category` field is set to `expense`
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### Gross Profit Margin
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-This is calculated in two steps: first by adding all the `total_value` fields where the `account_type` is set to `sales` and the `value_type` is set to `debit`; then dividing that by the `revenue` value calculated earlier to generate a percentage value.
+## Learn More
 
-### Net Profit Margin
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-This metric is calculated by subtracting the `expenses` value from the `revenue` value and dividing the remainder by `revenue` to calculate a percentage.
-
-### Working Capital Ratio
-
-This is calculated dividing the `assets` by the `liabilities` creating a percentage value where `assets` are calculated by:
-
-- adding the `total_value` from all records where the `account_category` is set to `assets`, the `value_type` is set to `debit`, and the `account_type` is one of `current`, `bank`, or `current_accounts_receivable`
-- subtracting the `total_value` from all records where the `account_category` is set to `assets`, the `value_type` is set to `credit`, and the `account_type` is one of `current`, `bank`, or `current_accounts_receivable`
-
-and liabilities are calculated by:
-
-- adding the `total_value` from all records where the `account_category` is set to `liability`, the `value_type` is set to `credit`, and the `account_type` is one of `current` or `current_accounts_payable`
-- subtracting the `total_value` from all records where the `account_category` is set to `liability`, the `value_type` is set to `debit`, and the `account_type` is one `current` or `current_accounts_payable`
-
-## Formatting
-
-All currency figures must be formatted as follows:
-- The value is prefixed with a `$` sign
-- A comma is used to separate every 3 digits in the thousands, millions, billions, and trillions
-- Cents are removed
-
-All percentage values must be formatted to one decimal digit and be prefixed with a `%` sign.  Don't forget to multiply by 100 each time you're tasked with calculating a percentage value.
-
-## Example
-
-Below is what a typical output should look like.  Please note this is *not* the output of the challenge but a mere example.
-
-```
-$ ./myChallenge
-Revenue: $519,169
-Expenses: $411,664
-Gross Profit Margin: 22%
-Net Profit Margin: 21%
-Working Capital Ratio: 95%
-```
-
-# Dependencies
-
-If your program requires a special way to compile or a specific version of a toolset, please be sure to include that in your running instructions.
-
-__Thank you and good luck!__
+To learn React, check out the [React documentation](https://reactjs.org/).
