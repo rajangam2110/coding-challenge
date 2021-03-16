@@ -5,4 +5,17 @@
   left: calc( 50% - 200px);
   top: calc( 50% - 100px);
   background-color: #aaa;
+ 
+  .row{
+    border-bottom: 1px solid #666;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    
+    .columnName{
+      width: 50%;
+      text-align: left;
+    }
+  }
 }
